@@ -40,6 +40,7 @@ export const Login = () => {
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
+        redirectTo: "https://rb-indoor-web.vercel.app"
       });
 
       if (error) throw error;
